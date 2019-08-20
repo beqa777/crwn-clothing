@@ -1,1 +1,10 @@
+#root{
+    font-family: 'Open Sans Condensed';
+    padding: 20px;
+    
+}
 
+a{
+    text-decoration: none;
+    color: black;
+}
