@@ -1,6 +1,9 @@
 import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
+import { withRouter } from 'react-router-dom';
+
+import { signInWithGoogle } from '../../firebase/firebase.util';
 
 import './sign-in.styles.scss';
 
@@ -45,7 +48,16 @@ class SignIn extends React.Component {
                     <FormInput type='password' name='password' value={this.state.password}
                         handleChange={this.handleChange} label='Password' required />
 
-                    <CustomButton type='submit'> Sign In</CustomButton>
+                    <div className='buttons'>
+                        <CustomButton type='submit'> Sign In</CustomButton>
+                        <CustomButton isGoogleSignIn onClick={ async () => {
+                            await signInWithGoogle();
+                            this.props.history.push('/');
+                        }}>
+                            Sign In with google
+                    </CustomButton>
+                    </div>
+
                 </form>
 
             </div>
@@ -54,4 +66,4 @@ class SignIn extends React.Component {
 
 }
 
-export default SignIn;
+export default withRouter(SignIn);

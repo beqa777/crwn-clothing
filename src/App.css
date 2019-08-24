@@ -1,10 +1,14 @@
-#root{
+#root {
     font-family: 'Open Sans Condensed';
     padding: 20px;
-    
+
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
+}
+
+* {
+    box-sizing: border-box;
 }
