@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^6.2.2",
+    "eslint-plugin-async-await": "0.0.0",
     "firebase": "^6.4.2",
     "node-sass": "^4.12.0",
+    "npm-check-updates": "^3.1.21",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
