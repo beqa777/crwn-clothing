@@ -3,7 +3,7 @@ import ShopActionTypes from './shop.types';
 
 const DEFAULT_STATE = {
     collections: null,
-    isFetching: false,
+    isFetching: true,
     errorMessage: undefined
 };
 
